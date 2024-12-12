@@ -7,6 +7,7 @@ import { FaPhone, FaMessage, FaStore } from "react-icons/fa6";
 import "./ProductDetail.scss";
 import { getProductReview, getUserData } from '../../apis/getAPIs';
 import { axiosInstance } from '../../apis/axiosInstance';
+import { env } from '../../config/env';
 // import {
 //   TbPlayerTrackNextFilled,
 //   TbPlayerTrackPrevFilled,
@@ -73,7 +74,7 @@ const ProductDetail = () => {
       if (isLoggedIn) {
         const buyerId = user?.id;
         const response = await axiosInstance.post(
-          'http://localhost:8000/api/cart/add',
+          `${env.REACT_APP_API_ROOT}/cart/add`,
           {
             buyer_id: buyerId,
             product_id: product.id,
