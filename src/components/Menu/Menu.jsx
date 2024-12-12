@@ -16,16 +16,24 @@ const Menu = () => {
   const fetchProducts = async (categoryId, categoryKey) => {
     try {
       const response = await ProductsByCategory(categoryId);
-      if (response) {
+      if (response && Array.isArray(response.data)) {
         setProducts((prevProducts) => ({
           ...prevProducts,
           [categoryKey]: response.data,
         }));
       } else {
-        console.error(`Failed to fetch products for category ${categoryId}`);
+        console.error(`Invalid response for category ${categoryId}:`, response);
+        setProducts((prevProducts) => ({
+          ...prevProducts,
+          [categoryKey]: [],
+        }));
       }
     } catch (error) {
       console.error("Error fetching products:", error);
+      setProducts((prevProducts) => ({
+        ...prevProducts,
+        [categoryKey]: [],
+      }));
     }
   };
   
