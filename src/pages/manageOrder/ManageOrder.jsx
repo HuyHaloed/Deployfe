@@ -72,7 +72,7 @@ function ManageOrder() {
                         <td>
                           <img
                             src={product?.image}
-                            alt={product?.name}
+                            alt={product?.product_name}
                             style={{
                               width: "50px",
                               height: "50px",
@@ -80,7 +80,7 @@ function ManageOrder() {
                             }}
                           />
                         </td>
-                        <td>{product?.name}</td>
+                        <td>{product?.product_name}</td>
                         <td>{product.quantity}</td>
                         <td>
                           {product.status === "Pending" ? (

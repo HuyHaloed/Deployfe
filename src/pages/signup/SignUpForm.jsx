@@ -130,10 +130,7 @@ function SignUpForm() {
           <button type="submit" className={styles.button}>
             ĐĂNG KÝ
           </button>
-          <p className={styles.separator}>
-            <span>HOẶC</span>
-          </p>
-          <SocialLogIn />
+          
         </form>
         <p className={styles.login}>
           Đã có tài khoản?

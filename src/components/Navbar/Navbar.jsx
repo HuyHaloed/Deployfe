@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContext";
 import { logout } from '../../apis/postAPIs';
-
+import { env } from '../../config/env'; 
 function Navbar() {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +36,7 @@ function Navbar() {
   const handleSearch = async () => {
     if (!searchQuery.trim()) return; 
     try {
-      const response = await fetch(`http://localhost:8000/api/search?query=${searchQuery}`); // hmmmmmm
+      const response = await fetch(`${env.REACT_APP_API_ROOT}/search?query=${searchQuery}`); // hmmmmmm
       if (response.ok) {
         const data = await response.json();
         console.log("Search results:", data);
@@ -93,7 +93,7 @@ function Navbar() {
 
         <div className={styles.messageIcon}>
           <div onClick={() => navigate("/status")}>
-            <Icon icon="tabler:mail-filled" className={styles.iconify} />
+            <Icon icon="material-symbols-light:order-approve-sharp" className={styles.iconify} />
             <span className={styles.messageCount}>10</span>
           </div>
         </div>
