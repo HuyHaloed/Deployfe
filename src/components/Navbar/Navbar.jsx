@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContext";
 import { logout } from '../../apis/postAPIs';
 import { env } from '../../config/env'; 
+import defaultAvt from '../../assets/images/default-avatar.jpg';
+
 function Navbar() {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState(defaultAvt);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const { cart } = useProducts();
