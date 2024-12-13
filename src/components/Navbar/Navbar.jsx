@@ -23,7 +23,7 @@ function Navbar() {
     if (loggedInStatus) {
       setIsLoggedIn(true);
       setUsername(sessionStorage.getItem("username"));
-      setAvatar(sessionStorage.getItem("avatar"));
+      setAvatar(defaultAvt);
     }
   }, []);
 
