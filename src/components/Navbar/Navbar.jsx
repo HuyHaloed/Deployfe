@@ -89,14 +89,12 @@ function Navbar() {
               icon="mingcute:notification-fill"
               className={styles.iconify}
             />
-            <span className={styles.notificationCount}>3</span>
           </Link>
         </div>
 
         <div className={styles.messageIcon}>
           <div onClick={() => navigate("/status")}>
             <Icon icon="material-symbols-light:order-approve-sharp" className={styles.iconify} />
-            <span className={styles.messageCount}>10</span>
           </div>
         </div>
 
