@@ -61,6 +61,8 @@ function SignUpForm() {
 
       if (res.status === true) {
         navigate("/login");
+      } else {
+        setErrorMessage(res.message);
       }
     }
   };
