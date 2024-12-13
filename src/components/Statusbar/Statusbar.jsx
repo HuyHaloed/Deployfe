@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Statusbar.scss";
 import { getOrders, getUserData } from "../../apis/getAPIs";
 import { mockOrders } from "../../apis/mock-data";
+import defaultAvt from '../../assets/images/default-avatar.jpg';
 
 const StatusBar = () => {
   const [user, setUser] = useState(null);
@@ -92,7 +93,7 @@ const StatusBar = () => {
   return (
     <div className="status-bar">
       <div className="user-profile">
-        <img src="profile-placeholder.png" alt="Profile" />
+        <img src = {defaultAvt} alt="Profile" />
         <p>{user?.name}</p>
         <button>Sửa Hồ Sơ</button>
       </div>
