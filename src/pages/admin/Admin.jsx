@@ -125,7 +125,7 @@ function Admin() {
                   <td>{(currentPage - 1) * USERS_PER_PAGE + index + 1}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
-                  <td>{user.phone}</td>
+                  <td>{user.phone_number}</td>
                   <td>{user.role}</td>
                   <td>
                     <button
