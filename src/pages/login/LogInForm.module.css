@@ -126,3 +126,12 @@
 .container a:hover {
   text-decoration: underline;
 }
+
+.error {
+  color: #ff5e62;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+}
